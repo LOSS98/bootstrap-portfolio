@@ -1,0 +1,104 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$primary: #00aaff;
+$secondary: #006080;
+$dark-gray: #1b2a35;
+$light-gray: #2d3e4a;
+$white: #ffffff;
+
+$accent-blue: #0077cc;
+$background-dark: #0d141a;
+
+body {
+  background: linear-gradient(90deg, #0a0f19, #1d3753);
+  font-family: 'Poppins', sans-serif;
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  background-color: $background-dark;
+}
+
+.nav-link {
+  color: $white;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: 1px solid $accent-blue;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: lighten($primary, 10%);
+    transform: scale(1.05);
+  }
+}
+
+.section {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.dark-text {
+  color: $dark-gray;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.whoami-image {
+  max-width: 150px;
+}
+
+.company-image {
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.company-image-horizontal {
+  max-width: 200px;
+  object-fit: contain;
+
+}
+
+.card-horizontal {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.card-horizontal-img-left {
+  max-width: 100%;
+  object-fit: contain;
+  @media (min-width: 768px) {
+    max-width: 200px;
+  }
+}
+
+.card-horizontal-body {
+  padding: 1.5rem;
+}
+
+
+
+
